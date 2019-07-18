@@ -7,7 +7,7 @@ import ListUser from '@/components/ListUser'
 import CreateUser from '@/components/CreateUser'
 import userDetail from '@/components/userDetail'
 import VuePaginate from 'vue-paginate'
-import updateUser from '@/components/updateUser'
+import Master from '@/components/Master'
 
 Vue.use(Router)
 Vue.use(VueAxios, axios)
@@ -40,9 +40,9 @@ export default new Router({
       component: userDetail
     },
     {
-      path: '/updateUser/:id',
-      name: 'users.update',
-      component: updateUser
+      path: '/Apptodo',
+      name: 'app.todo',
+      component: Master
     }
   ]
 })

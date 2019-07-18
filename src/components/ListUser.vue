@@ -6,6 +6,22 @@
                 <router-link to="/create_user" class="btn btn-primary">Create</router-link>
             </div> -->
         </div>
+      <form @submit.prevent="addUser" class="ap1">
+      <div>
+          <div class="row">
+            <label>name:</label>
+            <input type="text" class="form-control" v-model="olduser.name">
+          </div>
+          <br />
+          <div class="row">
+            <label>Job:</label>
+            <input type="text" class="form-control" v-model="olduser.job">
+          </div>
+      </div><br />
+      <div class="form-group">
+        <button class="btn btn-primary">Create</button>
+      </div>
+    </form>
         <paginate name="users" :list="users" class="pagination">
         <table class="table table-striped table-hover">
             <thead>
@@ -29,9 +45,9 @@
                     <td>{{ user.first_name }}</td>
                     <td>{{ user.last_name }}</td>
                     <td>{{ user.avatar }}</td>
-                    <!-- <td><button class="btn btn-danger" @click="change(user.id)"> Details</button> -->
+                    <td><button class="btn btn-danger" @click="change(user.id)"> Details</button>
                     <td><router-link :to="{name: 'users.userDetail', params: {id: user.id}}" class="btn btn-success">Details</router-link></td>
-                    <td><router-link :to="{name: 'users.update', params: {id: user.id}}" class="btn btn-warning">Edit</router-link></td>
+                    <td><router-link to="/edit" class="btn btn-warning">Edit</router-link></td>
                     <td><button class="btn btn-danger" v-on:click="deleteUser(user.id)">Delete</button></td>
                 </tr>
             </tbody>
@@ -42,21 +58,39 @@
 </template>
 <script>
 import axios from 'axios'
-// import userDetail from './userDetail'
+import { async } from 'q';
+import userDetail from './userDetail';
 // import router from '../router/index';
 export default {
-  // components: {
-  //   userDetail
-  // },
+  components: {
+    userDetail
+  },
   data () {
     return {
       users: [],
+      olduser: {
+        name: '',
+        job: '',
+      },
       userDetail: {},
       paginate: ['users'],
-      errors: []
+      errors: [],
     }
   },
   methods: {
+    //   addUser: async function() {
+    //   let {status} = await axios.post('https://reqres.in/api/users', {
+    //     body: this.olduser
+    //   })
+    //   .then((response) => {
+    //     this.users = response.data
+    //     // this.users = this.users.push(element)
+    //     console.log(this.users)
+    //   })
+    //   .catch(e => {
+    //     this.errors.push(e)
+    //   })
+    // },
     deleteUser: async function (userId) {
       let {status} = await axios.delete('https://reqres.in/api/users/' + userId)
       if (status === 204) {
@@ -65,7 +99,7 @@ export default {
       } else {
         console.log('error!')
       }
-    }
+    },
     // change: async function (userId) {
     //   router.push({
     //     name: 'users.userDetail',
@@ -73,6 +107,7 @@ export default {
     //       id: userId
     //     }
     //   })
+      
     // }
   },
   mounted () {

@@ -1,7 +1,6 @@
 <template>
   <div>
     <h1>Create A User</h1>
-    {{ userID }}
     <form @submit.prevent="addUser" class="ap1">
       <div>
           <div class="row">
@@ -28,7 +27,7 @@
       </tr>
       </thead>
       <tbody>
-        <tr v-for="user in newUser" :key="user.id">
+        <tr>
           <td>{{ newUser.id }}</td>
           <td>{{ newUser.body.name }}</td>
           <td>{{ newUser.body.job }}</td>
@@ -41,36 +40,29 @@
 
 <script>
 import axios from 'axios'
-import router from '../router/index'
-export default {
-  data () {
-    return {
-      errors: [],
-      users: {
-        name: '',
-        job: ''
-      },
-      userID: null,
-      newUser: []
-    }
+import ListUser from '@/components/ListUser'
+  export default {
+      data () {
+        return {
+          errors: [],
+          users: {
+            name: '',
+            job: '',
+          },
+          newUser: [],
+        }
   },
   methods: {
-    addUser: async function () {
-      await axios.post('https://reqres.in/api/users?per_page=999999', {
+    addUser: async function() {
+      let {status} = await axios.post('https://reqres.in/api/users?per_page=999999', {
         body: this.users
       })
-        .then((res) => {
-          this.newUser = res.data
-          this.userID = this.newUser.id
-        })
-        .catch(e => {
-          this.errors.push(e)
-        })
-      router.push({
-        name: 'users.userDetail',
-        params: {
-          id: this.userID
-        }
+      .then((response) => {
+        this.newUser = response.data
+        console.log(this.newUser)
+      })
+      .catch(e => {
+        this.errors.push(e)
       })
     }
   }
