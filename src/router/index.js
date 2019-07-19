@@ -8,8 +8,10 @@ import CreateUser from '@/components/CreateUser'
 import userDetail from '@/components/userDetail'
 import VuePaginate from 'vue-paginate'
 import Master from '@/components/Master'
+import Vuex from 'vuex'
 
 Vue.use(Router)
+Vue.use(Vuex)
 Vue.use(VueAxios, axios)
 Vue.use(VuePaginate)
 
