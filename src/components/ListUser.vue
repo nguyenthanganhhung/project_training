@@ -3,25 +3,9 @@
         <div class="row">
             <div class="col-xl-9"></div>
             <!-- <div class="col-xl-2">
-                <router-link to="/create_user" class="btn btn-primary">Create</router-link>
+                <router-link to="/create-user" class="btn btn-primary">Create</router-link>
             </div> -->
         </div>
-      <form @submit.prevent="addUser" class="ap1">
-      <div>
-          <div class="row">
-            <label>name:</label>
-            <input type="text" class="form-control" v-model="olduser.name">
-          </div>
-          <br />
-          <div class="row">
-            <label>Job:</label>
-            <input type="text" class="form-control" v-model="olduser.job">
-          </div>
-      </div><br />
-      <div class="form-group">
-        <button class="btn btn-primary">Create</button>
-      </div>
-    </form>
         <paginate name="users" :list="users" class="pagination">
         <table class="table table-striped table-hover">
             <thead>
@@ -45,9 +29,9 @@
                     <td>{{ user.first_name }}</td>
                     <td>{{ user.last_name }}</td>
                     <td>{{ user.avatar }}</td>
-                    <td><button class="btn btn-danger" @click="change(user.id)"> Details</button>
-                    <td><router-link :to="{name: 'users.userDetail', params: {id: user.id}}" class="btn btn-success">Details</router-link></td>
-                    <td><router-link to="/edit" class="btn btn-warning">Edit</router-link></td>
+                    <!-- <td><button class="btn btn-danger" @click="change(user.id)"> Details</button></td> -->
+                    <td><router-link :to="{name: 'users-user-detail', params: { id: user.id }}" class="btn btn-success">Details</router-link></td>
+                    <td><router-link :to="{name: 'user-edit', params: { id: user.id }}" class="btn btn-warning">Edit</router-link></td>
                     <td><button class="btn btn-danger" v-on:click="deleteUser(user.id)">Delete</button></td>
                 </tr>
             </tbody>
@@ -59,11 +43,11 @@
 <script>
 import axios from 'axios'
 import { async } from 'q';
-import userDetail from './userDetail';
-// import router from '../router/index';
+import UserDetail from './UserDetail';
+import router from '../router/index';
 export default {
   components: {
-    userDetail
+    UserDetail,
   },
   data () {
     return {
@@ -78,19 +62,6 @@ export default {
     }
   },
   methods: {
-    //   addUser: async function() {
-    //   let {status} = await axios.post('https://reqres.in/api/users', {
-    //     body: this.olduser
-    //   })
-    //   .then((response) => {
-    //     this.users = response.data
-    //     // this.users = this.users.push(element)
-    //     console.log(this.users)
-    //   })
-    //   .catch(e => {
-    //     this.errors.push(e)
-    //   })
-    // },
     deleteUser: async function (userId) {
       let {status} = await axios.delete('https://reqres.in/api/users/' + userId)
       if (status === 204) {
@@ -100,17 +71,12 @@ export default {
         console.log('error!')
       }
     },
-    // change: async function (userId) {
-    //   router.push({
-    //     name: 'users.userDetail',
-    //     params: {
-    //       id: userId
-    //     }
-    //   })
-      
-    // }
   },
   mounted () {
+    if (localStorage.tokenID) {
+        this.$emit('authenticated', true);
+        this.$router.replace({ name: 'list-user'});
+    }
     axios.get('https://reqres.in/api/users?per_page=999999')
       .then((response) => {
         this.users = response.data.data

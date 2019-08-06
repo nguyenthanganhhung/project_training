@@ -2,33 +2,38 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
-import HelloWorld from '@/components/HelloWorld'
 import ListUser from '@/components/ListUser'
 import CreateUser from '@/components/CreateUser'
-import userDetail from '@/components/userDetail'
+import UserDetail from '@/components/userDetail'
 import VuePaginate from 'vue-paginate'
 import Master from '@/components/Master'
 import Vuex from 'vuex'
+import UserEdit from '@/components/UserEdit'
+import FormLogin from '@/components/FormLogin'
+import bootstrapvue from 'bootstrap-vue'
 
 Vue.use(Router)
 Vue.use(Vuex)
 Vue.use(VueAxios, axios)
 Vue.use(VuePaginate)
+Vue.use(bootstrapvue)
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      redirect: {
+        name: 'login'
+      }
     },
     {
-      path: '/listUser',
+      path: '/list-user',
+      name: 'list-user',
       component: ListUser
     },
     {
-      path: '/create_user',
-      name: 'users.create',
+      path: '/create-user',
+      name: 'users-create',
       component: CreateUser
     },
     // {
@@ -37,14 +42,24 @@ export default new Router({
     //   component: userDetail
     // },
     {
-      path: '/userDetail/:id',
-      name: 'users.userDetail',
-      component: userDetail
+      path: '/user-detail/:id',
+      name: 'users-user-detail',
+      component: UserDetail
     },
     {
-      path: '/Apptodo',
-      name: 'app.todo',
+      path: '/app-todo',
+      name: 'app-todo',
       component: Master
+    },
+    {
+      path: '/user-edit/:id',
+      name: 'user-edit',
+      component: UserEdit
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: FormLogin
     }
   ]
 })

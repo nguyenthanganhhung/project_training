@@ -50,8 +50,11 @@ export default {
     }
   },
   async mounted () {
+    if (localStorage.tokenID) {
+      this.$emit('authenticated', true);
+      this.$router.replace({ name: 'list-user'});
+    }
     let userId = this.$route.params.id
-
     try {
       let {data: {data}} = await axios.get('https://reqres.in/api/users/' + userId)
       this.user = data
@@ -71,7 +74,7 @@ export default {
           this.errors.push(e)
         })
       router.push({
-        name: 'users.userDetail',
+        name: 'users-user-detail',
         params: {
           id: this.userID
         }

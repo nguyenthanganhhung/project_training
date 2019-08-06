@@ -16,21 +16,24 @@ export default {
         appuserdetail:ListUser
     },
     async mounted() {
-        let userId = this.$route.params.id;
-
-        try {
-            let {data: {data}} = await axios.get('https://reqres.in/api/users/' + userId);
-            this.user = data;
-        } catch(e) {
-            console.log(e)
-        }
-        // .then((response) => {
-        //   this.user = response.data.data
-        //   console.log(this.userDetail)
-        // })
-        // .catch(e => {
-        //   this.errors.push(e)
-        // })
+      if (localStorage.tokenID) {
+        this.$emit('authenticated', true);
+        this.$router.replace({ name: 'list-user'});
+      }
+      let userId = this.$route.params.id;
+      try {
+          let {data: {data}} = await axios.get('https://reqres.in/api/users/' + userId);
+          this.user = data;
+      } catch(e) {
+          console.log(e)
+      }
+      // .then((response) => {
+      //   this.user = response.data.data
+      //   console.log(this.userDetail)
+      // })
+      // .catch(e => {
+      //   this.errors.push(e)
+      // })
     },
     data() {
         return {

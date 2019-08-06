@@ -1,15 +1,30 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-
+import axios from 'axios'
+import {getField, updateField} from 'vuex-map-fields'
+// import  { router } from '../router/index'
+import router from '../router/index'
 Vue.use(Vuex)
 
 export const STORAGE_KEY = 'todos-vuejs'
 export const store = new Vuex.Store({
   strict: true,
   state: {
-    todos: JSON.parse(window.localStorage.getItem(STORAGE_KEY) || '[]')
+    todos: JSON.parse(window.localStorage.getItem(STORAGE_KEY) || '[]'),
+    token: localStorage.getItem('token') || '',
+    form: {
+      email: '',
+      password: ''
+    }
+  },
+  getters: {
+    getField
   },
   mutations: {
+    updateField,
+    onSubmit (state, token) {
+      state.token = token
+    },
     addTodo (state, todo) {
       state.todos.push(todo)
     },
@@ -46,6 +61,22 @@ export const store = new Vuex.Store({
       state.todos.filter(todo => todo.done)
         .forEach(todo => {
           commit('removeTodo', todo)
+        })
+    },
+    onSubmit ({commit}, onSubmit) {
+      axios.post('https://reqres.in/api/login', {
+        ...onSubmit
+      })
+        .then((res) => {
+          const token = res.data.token
+          localStorage.setItem('tokenID', token)
+          router.push('/list-user')
+          commit('onSubmit', {token})
+        })
+        .catch((e) => {
+          localStorage.removeItem('tokenID')
+          router.push('/login')
+          console.log('errors!!!')
         })
     }
   }
