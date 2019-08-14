@@ -6,6 +6,7 @@ import router from './router'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import { store } from './store/store'
 import Master from './components/Master.vue'
+import LearnCss from './components/LearnCss.vue'
 
 Vue.config.productionTip = false
 
@@ -14,7 +15,7 @@ new Vue({
   el: '#app',
   router,
   store,
-  render: h => h(Master)
+  render: h => h(LearnCss)
   // components: { App },
   // template: '<App/>'
 })

@@ -9,6 +9,7 @@ import userDetail from '@/components/userDetail'
 import VuePaginate from 'vue-paginate'
 import Master from '@/components/Master'
 import Vuex from 'vuex'
+import LearnCss from '@/components/LearnCss'
 
 Vue.use(Router)
 Vue.use(Vuex)
@@ -45,6 +46,10 @@ export default new Router({
       path: '/Apptodo',
       name: 'app.todo',
       component: Master
+    },
+    {
+      path: '/learn-vue',
+      component: LearnCss
     }
   ]
 })
