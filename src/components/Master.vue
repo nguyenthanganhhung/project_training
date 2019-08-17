@@ -74,7 +74,6 @@ export default {
           return this.$store.state.todos;
         },
         filteredTodos () {
-          console.log(filters[this.visibility](this.todos))
           return filters[this.visibility](this.todos)
         },
         allChecked () {

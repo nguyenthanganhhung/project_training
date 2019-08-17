@@ -52,6 +52,13 @@ import ListUser from '@/components/ListUser'
           newUser: [],
         }
   },
+  mounted () {
+    if (localStorage.usertoken) {
+      console.log(localStorage.usertoken);
+      this.$emit('authenticated', true);
+      this.$router.replace({ name: 'list-user'});
+    }
+  },
   methods: {
     addUser: async function() {
       let {status} = await axios.post('https://reqres.in/api/users?per_page=999999', {
