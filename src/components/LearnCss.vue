@@ -1,361 +1,333 @@
 <template>
-  <div class="row">
-    <div class="container1">
-      <div class="circle1">
-        <p class="circle-content1">$99</p>
-        <p class="circle-content2">/person</p>
-      </div>
-      <div class="container1-content">
-        <div class="container1-content-box1">
-          <p id="h1">
-            BASIC
-          </p>
-          <p id="h2">PRICE PLAN</p>
-        </div>
-        <div class="container1-content-box2">
-          <div class="content1">
-            <p>Subtitle goes here</p>
-            <span>subtitle second line goes here lorem ipsum *</span>
+    <section class="container">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:200,400,700|Source+Sans+Pro:300,400&display=swap" rel="stylesheet">
+      <div class="col-md-4 price-table">
+        <div class="price-table-box">
+          <div class="price-cricle-price">
+            <p class="price-table-price">$99</p>
+            <p class="price-person">/Person</p>
           </div>
-          <div class="content2">
+        </div>
+        <div class="price-title-basic">
+          <h2 class="price-basic">BASIC</h2>
+          <h3 class="price-plan">PRICE PLAN</h3>
+        </div>
+        <div class="price-list-group">
+          <div class="price-header">
+            <h5>Subtitle goes here</h5>
+            <h6>subtitle second line goes here lorem ipsum *</h6>
+          </div>
+          <div class="price-list-item">
             <ul class="list-group">
-              <li class="list-group-item list-group-item-secondary">
-                <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-                <label>Lorem ipsum dolor sit amet</label>
-              </li>
-              <li class="list-group-item list-group-item-light">
-                <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-                <label>Consectetur adipisicing elit sed do</label>
-              </li>
-              <li class="list-group-item list-group-item-secondary">
-                <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-                <label>Eiusmod tempor incididunt ut</label>
-              </li>
-              <li class="list-group-item list-group-item-light">
-                <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-                <label>Labore et dolore magna</label>
-              </li>
-              <li class="list-group-item list-group-item-secondary">
-                <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-                <label>Enim ad minim veniam quis nostrud</label>
-              </li>
-            </ul>
+                <li>
+                  <P>&#9745;
+                    <span>ipsum dolor sit amet</span>
+                  </P>
+                </li>
+                <li>
+                  <p>&#x2611;
+                    <span>Consectetur adipisicing elit sed do</span>
+                    </p>
+                </li>
+                <li>
+                  <p>&#x2611;
+                    <span>tempor incididunt ut</span>
+                  </p>
+                </li>
+                <li>
+                  <p>&#x2611;
+                    <span>Labore et dolore magna</span>
+                  </p>
+                </li>
+                <li>
+                  <p>&#x2611;
+                    <span>Enim ad minim veniam quis nostrud</span>
+                  </p>
+                </li>
+              </ul>
           </div>
-          <div class="content3">
-            <p><a href="#">ORDER</a></p>
+          <div class="price-box-order">
+            <div class="price-order">
+              <span><a href="#">ORDER</a></span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="container2">
-        <div class="circle2">
-          <p class="circle-content1">$199</p>
-          <p class="circle-content2">/person</p>
+      <div class="col-md-4 price-table">
+        <div class="price-table-box">
+          <div class="price-cricle-price">
+            <p class="price-table-price-advanced">$199</p>
+            <p class="price-person">/Person</p>
+          </div>
         </div>
-        <div class="circle2-box">
+        <div class="price-new">
           <img src="../assets/icon.png">
-          <p class="circle2-box-font">New</p>
+          <!-- <span class="price-title-new">NEW</span> -->
         </div>
-        <div class="container2-content">
-          <div class="container1-content-box1">
-            <p id="h1">
-              ADVANCED
-            </p>
-            <p id="h2">PRICE PLAN</p>
-            <p id="h3">This is the very best price/quantity advanced plan *</p>
+        <div class="price-title-advanced">
+          <h2 class="price-basic">ADVANCED</h2>
+          <h2 class="price-plan">PRICE PLAN</h2>
+          <h6 class="price-plan-text">This is the very best price quantity advanced plan *</h6>
+        </div>
+        <div class="price-list-group">
+          <div class="price-header">
+            <h5>Subtitle goes here</h5>
+            <h6>subtitle second line goes here lorem ipsum *</h6>
           </div>
-          <div class="container1-content-box2">
-            <div class="content1">
-              <p>Subtitle goes here</p>
-              <span>subtitle second line goes here lorem ipsum *</span>
-            </div>
-            <div class="content2">
-              <ul class="list-group">
-                <li class="list-group-item list-group-item-secondary">
-                  <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-                  <label>Lorem ipsum dolor sit amet</label>
+          <div class="price-list-item">
+            <ul class="list-group">
+                <li>
+                  <P>&#9745;
+                    <span>ipsum dolor sit amet</span>
+                  </P>
                 </li>
-                <li class="list-group-item list-group-item-light">
-                  <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-                  <label>Consectetur adipisicing elit sed do</label>
+                <li>
+                  <p>&#x2611;
+                    <span>Consectetur adipisicing elit sed do</span>
+                    </p>
                 </li>
-                <li class="list-group-item list-group-item-secondary">
-                  <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-                  <label>Eiusmod tempor incididunt ut</label>
+                <li>
+                  <p>&#x2611;
+                    <span>tempor incididunt ut</span>
+                  </p>
                 </li>
-                <li class="list-group-item list-group-item-light">
-                  <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-                  <label>Labore et dolore magna</label>
+                <li>
+                  <p>&#x2611;
+                    <span>Labore et dolore magna</span>
+                  </p>
                 </li>
-                <li class="list-group-item list-group-item-secondary">
-                  <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-                  <label>Enim ad minim veniam quis nostrud</label>
+                <li>
+                  <p>&#x2611;
+                    <span>Enim ad minim veniam quis nostrud</span>
+                  </p>
                 </li>
               </ul>
-            </div>
-            <div class="content3">
-              <p><a href="#">ORDER</a></p>
+          </div>
+          <div class="price-box-order">
+            <div class="price-order">
+              <span><a href="#">ORDER</a></span>
             </div>
           </div>
         </div>
-    </div>
-    <div class="container3">
-        <div class="circle3">
-          <p class="circle-content1">$1999</p>
-          <p class="circle-content2">/person</p>
-        </div>
-        <div class="container3-content">
-          <div class="container1-content-box1">
-            <p id="h1">
-              LIFE
-            </p>
-            <p id="h2">TARIFF</p>
+      </div>
+      <div class="col-md-4 price-table">
+        <div class="price-table-box">
+          <div class="price-cricle-price">
+            <p class="price-table-price-life">$1999</p>
+            <p class="price-person">/Person</p>
           </div>
-          <div class="container1-content-box2">
-            <div class="content1">
-              <p>Subtitle goes here</p>
-              <span>subtitle second line goes here lorem ipsum *</span>
-            </div>
-            <div class="content2">
-              <ul class="list-group">
-                <li class="list-group-item list-group-item-secondary">
-                  <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-                  <label>Lorem ipsum dolor sit amet</label>
+        </div>
+        <div class="price-title-life">
+          <h2 class="price-basic">LIFE</h2>
+          <h3 class="price-plan">TARIFF</h3>
+        </div>
+        <div class="price-list-group">
+          <div class="price-header">
+            <h5>Subtitle goes here</h5>
+            <h6>subtitle second line goes here lorem ipsum *</h6>
+          </div>
+          <div class="price-list-item">
+            <ul class="list-group">
+                <li>
+                  <P>&#9745;
+                    <span>ipsum dolor sit amet</span>
+                  </P>
                 </li>
-                <li class="list-group-item list-group-item-light">
-                  <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-                  <label>Consectetur adipisicing elit sed do</label>
+                <li>
+                  <p>&#x2611;
+                    <span>Consectetur adipisicing elit sed do</span>
+                    </p>
                 </li>
-                <li class="list-group-item list-group-item-secondary">
-                  <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-                  <label>Eiusmod tempor incididunt ut</label>
+                <li>
+                  <p>&#x2611;
+                    <span>tempor incididunt ut</span>
+                  </p>
                 </li>
-                <li class="list-group-item list-group-item-light">
-                  <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-                  <label>Labore et dolore magna</label>
+                <li>
+                  <p>&#x2611;
+                    <span>Labore et dolore magna</span>
+                  </p>
                 </li>
-                <li class="list-group-item list-group-item-secondary">
-                  <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-                  <label>Enim ad minim veniam quis nostrud</label>
+                <li>
+                  <p>&#x2611;
+                    <span>Enim ad minim veniam quis nostrud</span>
+                  </p>
                 </li>
               </ul>
-            </div>
-            <div class="content3">
-              <p><a href="#">ORDER</a></p>
+          </div>
+          <div class="price-box-order">
+            <div class="price-order">
+              <span><a href="#">ORDER</a></span>
             </div>
           </div>
         </div>
-    </div>
-  </div>
+      </div>
+    </section>
 </template>
 <style lang="scss">
-  .row {
-    padding: 100px 0px 300px 20%;
-  }
-  //attribute global
-  .content-header {
-    height: 272px;
-    #h1 {
-      margin-left: 49px;
-      font-size: 26px;
+    .container {
+      max-width: 1170px;
+      height: auto;
+      margin: auto;
+      margin-top: 10%;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+    .price-table::after {
+      content: '';
       clear: both;
-      color: #ffffff;
-      font-weight: bold;
-      font-family:Arial, Helvetica, sans-serif
-    }
-    #h2 {
-      margin-left: 49px;
-      margin-top: -10px;
-      font-size: 27px;
-      color: #ffffff;
-      font-family:Arial, Helvetica, sans-serif
+      display: table;
+      padding-top:9rem;
       }
-  }
-  .circle {
-    width: 120px;
-    height: 120px;
-    background: #393d50;
-    border: 1px solid #393d50;
-    border-radius: 60px;
-    position: absolute;
-    margin-left: 43px;
-    margin-top: -60px;
-  }
-  .circle-content {
-    color: #99a9b5;
-    margin-left: 35px;
-    margin-top: 10px;
-    font-size: 15px;
-  }
-  .content-box2 {
-    input {
-      margin-left: 27px;
+    .price-table:hover {
+      box-shadow: 10px 10px 5px grey;
     }
-    label {
-      margin-left: 55px;
-      color: #5f727f;
-    }
-  }
-  .content-box3 {
-    width: 150px;
-    height: 50px;
-    background: #b6c6c9;
-    border: 2px solid #b6c6c9;
-    border-radius: 25px;
-    margin: 48px 190px 48px 50px;
-    p {
-      margin: 13px 50px;
-      font-weight: bold;
-      font-size: 14px;
-      a {
-        color: #ffffff;
-      }
-    }
-  }
-  .content-box1 {
-    height: 99px;
-    p {
-      font-size: 20px;
-      margin-left: 45px;
-      padding-top: 27px;
-      color: #7b8a94;
-      margin-bottom: -5px;
-    }
-    span {
-      font-size: 9px;
-      color: #99a9b5;
-      margin-left: 46px;
-    }
-  }
-  .circle-form {
-    height: 26px;
-    width: 50px;
-    margin-top: 27px;
-    font-size: 26px;
-  }
-  //the end attribute global
-  .container1 {
-    width: 390px;
-    .container1-content {
-      .container1-content-box1 {
-        @extend .content-header;
-        padding-top: 148px;
-        background-color: #00bcd4;
-      }
-      .container1-content-box2 {
-        background-color: #ffffff;
-        border: 1px solid #dfe5e8;
-        height: 528px;
-        .content1 {
-          @extend .content-box1;
-        }
-        .content2 {
-          @extend .content-box2
-        }
-        .content3 {
-          @extend .content-box3
-        }
-      }
-    }
-    .circle1 {
-      @extend .circle;
-      .circle-content1 {
-        color: #00bcd4;
-        margin-left: 35px;
-        @extend .circle-form
-      }
-      .circle-content2 {
-        @extend .circle-content
-      }
-    }
-  }
-  .container2 {
-    width: 390px;
-    .container2-content {
-      .container1-content-box1 {
-        @extend .content-header;
-        padding-top: 110px;
-        background-color: #1c94ca;
-        #h3 {
-          color: #ffffff;
-          font-size: 10px;
-          font-family:Arial, Helvetica, sans-serif;
-          margin-left: 49px;
-        }
-      }
-      .container1-content-box2 {
-        height: 528px;
-        background-color: #ffffff;
-        border-bottom: 1px solid #dfe5e8;
-        .content1 {
-          @extend .content-box1;
-        }
-        .content2 {
-          @extend .content-box2
-        }
-        .content3 {
-          @extend .content-box3;
-          background: #2c2e3d;
-          border: 2px solid #2c2e3d;
-        }
-      }
-    }
-    .circle2 {
-      @extend .circle;
-      .circle-content1 {
-        color: #1b9dd9;
-        margin-left: 32px;
-        @extend .circle-form
-      }
-      .circle-content2 {
-        @extend .circle-content
-      }
-    }
-    .circle2-box {
+    .price-table {
+      border: 1px solid #dfe5e8;
+      padding: 0;
+      
+      .price-table-box {
+      width: 7.5rem;
+      height: 7.5rem;
+      border-radius: 50%;
+      background-color: #393d50;
       position: absolute;
-      margin-top: -34px;
-      margin-left: 148px;
-      .circle2-box-font {
-        font-size: 10px;
-        color:#ffffff;
-        margin-top: -43px;
-        padding-left: 23px;
-
+      margin-top: -3.75rem;
+      margin-left: 2.75rem;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+        .price-cricle-price {
+          .price-table-price {
+            color: #0ec7e1;
+            margin: 0;
+          }
+          .price-person {
+            color: #99a9b5;
+            margin: 0;
+            font-family: 'Source Sans Pro', sans-serif;
+          }
+          .price-table-price-advanced {
+            color: #1c94ca;
+            margin: 0;
+          }
+          .price-table-price-life {
+            color: #7264bd;
+            margin: 0;
+          }
+        }
       }
-    }
-  }
-  .container3 {
-    width: 390px;
-    .container3-content {
-      .container1-content-box1 {
-        padding-top: 148px;
+      .price-new::after {
+        content: 'NEW';
+        color: #ffffff;
+        font-size: 0.75rem;
+        display: block;
+        margin-top:-2.8125rem;
+        margin-left: 0.125rem;
+        text-align: center;
+      }
+      .price-new {
+        width: 66px;
+        height: 66px;
+        margin-top: -2.0625rem;
+        position: absolute;
+        margin-left: 9.1875rem;
+        text-align: center;
+      }
+      .price-title-basic {
+        font-size: 2.25rem;
+        background-color: #00bcd4;
+        color: #ffffff;
+        height: 17rem;
+        padding: 9rem 0 0  2.9rem;
+        font-family: 'Montserrat', sans-serif;
+        .price-basic {
+          margin: 0;
+          padding: 0;
+          font-weight: bold;
+        }
+        .price-plan {
+          margin: 0;
+          padding-top: 1.3rem;
+          font-weight: 200;
+        }
+      }
+      .price-title-advanced {
+        @extend .price-title-basic;
+        padding: 6.5rem 0 0 2.9rem;
+        background-color: #1c94ca;
+        .price-plan-text {
+          font-size: 0.875rem;
+          font-family: 'Source Sans Pro', sans-serif;
+          padding-top: 1rem;
+        }
+      }
+      .price-title-life {
+        @extend .price-title-basic;
         background-color: #7264bd;
-        @extend .content-header
       }
-      .container1-content-box2 {
-        height: 528px;
+      .price-list-group {
         background-color: #ffffff;
-        border: 1px solid #dfe5e8;
-        .content1 {
-          @extend .content-box1
+        color: #7b8a94;
+        font-family: 'Source Sans Pro', sans-serif;
+        .price-header {
+          height: 6.2rem;
+          h5 {
+            font-size: 1.5rem;
+            padding: 1.8rem 0 0 2.9rem;
+            margin: 0;
+            font-weight: 300;
+          }
+          h6 {
+            font-size: 0.875rem;
+            margin: 0;
+            padding: 0.625rem 0 1.75rem 2.9rem;
+          }
         }
-        .content2 {
-          @extend .content-box2
+        .price-list-item {
+          ul {
+            list-style: none;
+          }
+          li:nth-child(odd) {
+            background: #f4f6f7;
+          }
+          p {
+            padding: 1rem 0 0 2.9rem;
+            span {
+              padding-left: 0.3125rem;
+            }
+          }
         }
-        .content3 {
-          @extend .content-box3
+        .price-box-order {
+          height: 9.0625rem;
+            display: flex;
+            align-items: center;
+            padding-left: 2.9rem;
+          .price-order:hover {
+            border: 1px solid #b6c6c9;
+            box-shadow: 10px 10px 5px grey;
+            background: #2c2e3d;
+          }
+          .price-order {
+            height: 3.125rem;
+            width: 9.375rem;
+            background-color: #b6c6c9;
+            border: 1px solid #b6c6c9;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 1.5625rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            a {
+              color: #ffffff;
+              text-decoration: none;
+            }
+          }
         }
-      }
-    }
-    .circle3 {
-      @extend .circle;
-      .circle-content1 {
-        color: #9482f6;
-        margin-left: 25px;
-        @extend .circle-form
-      }
-      .circle-content2 {
-        @extend .circle-content
       }
     }
   }
