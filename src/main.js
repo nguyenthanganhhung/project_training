@@ -10,14 +10,15 @@ import { store } from './store/store'
 import VueRouter from 'vue-router'
 // import FormLogin from './components/FormLogin.vue'
 // import Master from './components/Master.vue'
+import LearnCss from './components/LearnCss.vue'
 Vue.config.productionTip = false
 Vue.use(VueRouter)
 new Vue({
   el: '#app',
   router,
   store,
-  // render: h => h(FormLogin)
+  render: h => h(LearnCss)
   // render: h => h(Master)
-  components: { App },
-  template: '<App/>'
+  // components: { App },
+  // template: '<App/>'
 })
