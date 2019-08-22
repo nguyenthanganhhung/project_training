@@ -148,7 +148,7 @@
     </div>
   </div>
 </template>
-<style lang="scss" scoped>
+<style lang="scss">
   .row {
     padding: 100px 0px 300px 20%;
   }
