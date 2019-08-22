@@ -9,8 +9,6 @@
           </div>
         </div>
         <div class="price-title-basic">
-          <!-- <span>BASIC</span>
-          <span>PRICE PLAN</span> -->
           <h2 class="price-basic">BASIC</h2>
           <h3 class="price-plan">PRICE PLAN</h3>
         </div>
@@ -55,7 +53,6 @@
           </div>
         </div>
       </div>
-<!-- ////////////////////////////////////////////////////////////////////////// -->
       <div class="col-md-4 price-table">
         <div class="price-table-box">
           <div class="price-cricle-price">
@@ -68,8 +65,6 @@
           <!-- <span class="price-title-new">NEW</span> -->
         </div>
         <div class="price-title-advanced">
-          <!-- <span>BASIC</span>
-          <span>PRICE PLAN</span> -->
           <h2 class="price-basic">ADVANCED</h2>
           <h2 class="price-plan">PRICE PLAN</h2>
           <h6 class="price-plan-text">This is the very best price/quantity advanced plan *</h6>
@@ -115,7 +110,6 @@
           </div>
         </div>
       </div>
-<!-- ////////////////////////////////////////////////////////////////////////// -->
       <div class="col-md-4 price-table">
         <div class="price-table-box">
           <div class="price-cricle-price">
@@ -124,8 +118,6 @@
           </div>
         </div>
         <div class="price-title-life">
-          <!-- <span>BASIC</span>
-          <span>PRICE PLAN</span> -->
           <h2 class="price-basic">LIFE</h2>
           <h3 class="price-plan">TARIFF</h3>
         </div>

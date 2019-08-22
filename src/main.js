@@ -6,7 +6,6 @@ import router from './router'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import { store } from './store/store'
 // import Master from './components/Master.vue'
-import TestCss from './components/TestCss.vue'
 import LearnFrontCss from './components/LearnFrontCss.vue'
 
 Vue.config.productionTip = false
