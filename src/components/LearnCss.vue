@@ -157,7 +157,7 @@
           </div>
           <div class="price-box-order">
             <div class="price-order">
-              <span><a href="#">ORDER</a></span>
+              <span><a href="https://www.w3schools.com/cssref/default.asp">ORDER</a></span>
             </div>
           </div>
         </div>
