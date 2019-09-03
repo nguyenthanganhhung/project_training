@@ -12,6 +12,7 @@ import UserEdit from '@/components/UserEdit'
 import FormLogin from '@/components/FormLogin'
 import bootstrapvue from 'bootstrap-vue'
 import LearnCss from '@/components/LearnCss'
+import TestCss from '@/components/TestCss'
 
 Vue.use(Router)
 Vue.use(Vuex)
@@ -65,6 +66,10 @@ export default new Router({
     {
       path: '/learn-css',
       component: LearnCss
+    },
+    {
+      path: '/test-css',
+      component: TestCss
     }
   ]
 })
